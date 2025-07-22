@@ -1,0 +1,10 @@
+name: Create VPS
+
+on: workflow_dispatch
+
+jobs:
+  start-vps:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Start tmate session
+      uses: mxschmitt/action-tmate@v3
