@@ -1,0 +1,13 @@
+name: Auto Start VPS
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # mỗi 6 tiếng restart 1 lần
+  workflow_dispatch:
+
+jobs:
+  autostart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: mxschmitt/action-tmate@v3
